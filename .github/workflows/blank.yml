@@ -39,7 +39,7 @@ jobs:
       - name: Start MYSQL Server
         run: |
           echo "Starting MYSQL"
-          mysqladmin --protocol=tcp -h localhost -P 3306 -u root -p${{ MYSQL_ROOT_PASSWORD }} ping &> /dev/null && break
+          mysqladmin --protocol=tcp -h localhost -P 3306 -u root -p${{ env.MYSQL_ROOT_PASSWORD }} ping &> /dev/null && break
           sleep 2
           
       #- name: Create Database and Grant Full Permissions to User1
