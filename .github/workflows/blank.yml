@@ -5,16 +5,16 @@ name: CD
 # Controls when the workflow will run
 on:
   # Triggers the workflow on push or pull request events but only for the "main" branch
-  push:
-    branches: [ "main" ]
+  #push:
+    #branches: [ "main" ]
   #pull_request:
     #branches: [ "main" ]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
-  #repository_dispatch:
-    #types:
-      #- my_event
+  repository_dispatch:
+    types:
+      - my_event
       
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
